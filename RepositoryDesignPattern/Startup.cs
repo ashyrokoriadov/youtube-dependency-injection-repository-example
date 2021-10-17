@@ -23,6 +23,7 @@ namespace RepositoryDesignPattern
             services.AddSingleton(typeof(IRepo<Book>), typeof(CollectionBasedRepo));
             //services.AddTransient(typeof(IRepo<Book>), typeof(CollectionBasedRepo));
             //services.AddTransient(typeof(IRepo<Book>), typeof(DataBaseRepo));
+            //services.AddSingleton(typeof(IRepo<Book>), typeof(DataBaseRepo));
 
             services.AddControllers();
         }

@@ -9,7 +9,7 @@ namespace RepositoryDesignPattern.Repository
     public class DataBaseRepo : IRepo<Book>
     {
         //заменить на данные для Вашей базы данных
-        private readonly string connectionString = @"Server= ANDREY-LAPTOP\SQLEXPRESS; " +
+        private readonly string connectionString = @"Server= DESKTOP-3S8BU25; " +
                 "Database= RandomTestData; " +
                 "Integrated Security=True;";
         
