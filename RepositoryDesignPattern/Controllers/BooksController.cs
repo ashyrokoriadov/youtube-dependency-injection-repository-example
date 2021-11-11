@@ -21,7 +21,9 @@ namespace RepositoryDesignPattern.Controllers
         {
             try
             {
+                item = item.WithCorrelationId(this.GetCorrelationId());
                 _booksRepository.Add(item);
+
                 return Ok(true);
             }
             catch (Exception)
