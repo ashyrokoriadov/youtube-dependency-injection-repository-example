@@ -16,9 +16,7 @@ namespace RepositoryDesignPattern
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; private set; }
-
-        public ILifetimeScope AutofacContainer { get; private set; }
+        public IConfiguration Configuration { get; }
 
         // ConfigureServices - это место рагистрации зависимостей. Этот метод вызвается
         // до вызова метода ConfigureContainer, который задекларирован ниже.
@@ -42,7 +40,7 @@ namespace RepositoryDesignPattern
 
             // Это аналог строчки services.AddTransient(typeof(IRepo<Book>), typeof(CollectionBasedRepo));
             // в файле Startup.cs.
-            //builder.RegisterType<DataBaseRepo>().As<IRepo<Book>>();
+            // builder.RegisterType<DataBaseRepo>().As<IRepo<Book>>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
